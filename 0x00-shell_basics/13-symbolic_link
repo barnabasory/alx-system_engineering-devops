@@ -1,2 +1,7 @@
 #!/bin/bash
-ln -s /bin/ls ./__ls__
+for file in *.html; do
+    if [ ! -e "../$file" ] || [ "$file" -nt "../$file" ]; then
+        cp "$file" "../"
+        echo "Copied $file to parent directory"
+    fi
+done
