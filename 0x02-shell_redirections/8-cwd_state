@@ -1,2 +1,2 @@
 #!/bin/bash
-echo 'Hello world' > ls_cwd_content | ls -la ls_cwd_content
+ls -la | tee ls_cwd_content > /dev/null
